@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "477654325916",
+    "project_id": "zonify-ebc84",
+    "storage_bucket": "zonify-ebc84.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477654325916:android:a9315c81693720b8cd6b59",
+        "android_client_info": {
+          "package_name": "com.example.projectmvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477654325916-urcfortmn99opn46an04ft9q1kgemrlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdP_jPu_XIdM3VL8eZoOKJ2On2bLQ0_Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477654325916-urcfortmn99opn46an04ft9q1kgemrlp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "477654325916-0grf0me62h0lqqcp9lb314bk79c9lj0m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.obaidullahch.zonify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477654325916:android:657370b14a43caaacd6b59",
+        "android_client_info": {
+          "package_name": "com.example.random"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477654325916-urcfortmn99opn46an04ft9q1kgemrlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdP_jPu_XIdM3VL8eZoOKJ2On2bLQ0_Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477654325916-urcfortmn99opn46an04ft9q1kgemrlp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "477654325916-0grf0me62h0lqqcp9lb314bk79c9lj0m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.obaidullahch.zonify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477654325916:android:4472b36cd1bc8a8fcd6b59",
+        "android_client_info": {
+          "package_name": "com.obaidullahch.zonify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477654325916-urcfortmn99opn46an04ft9q1kgemrlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdP_jPu_XIdM3VL8eZoOKJ2On2bLQ0_Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477654325916-urcfortmn99opn46an04ft9q1kgemrlp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "477654325916-0grf0me62h0lqqcp9lb314bk79c9lj0m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.obaidullahch.zonify"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

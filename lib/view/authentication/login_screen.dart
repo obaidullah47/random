@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:random/common/utils/Round_Button.dart';
 import 'package:random/common/utils/general_utils.dart';
 import 'package:random/routes/routes_names.dart';
+import 'package:random/view_model/auth/auth_viewModel.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -31,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final authprovider = Provider.of<AuthViewmodel>(context);
     return Scaffold(
       appBar: AppBar(title: Text("Login", style: TextStyle(fontSize: 22))),
       body: Padding(
@@ -44,6 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextFormField(
                 focusNode: emialfocus,
                 controller: emailcontroller,
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   hintText: "Enter Your Email",
                   labelText: "Email",
@@ -63,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (value == null || value.isEmpty) {
                     GeneralUtils.flushbarmessage(context, "Enter your email");
                   }
-                  if (value!.contains('@')) {
+                  if (!value!.contains('@')) {
                     GeneralUtils.flushbarmessage(
                       context,
                       "Enter complete Gmail",
@@ -114,7 +118,13 @@ class _LoginScreenState extends State<LoginScreen> {
               RoundButton(
                 title: "Login",
                 onPress: () {
-                  GeneralUtils.flushbarmessage(context, "Login Successfully");
+                  if (formkey.currentState!.validate()) {
+                    authprovider.loginwithemail(
+                      emailcontroller.text.toString(),
+                      passwordcontroller.text.toString(),
+                      context,
+                    );
+                  }
                 },
               ),
 

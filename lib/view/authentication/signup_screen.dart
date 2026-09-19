@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:random/common/utils/Round_Button.dart';
 import 'package:random/common/utils/general_utils.dart';
 import 'package:random/routes/routes_names.dart';
+import 'package:random/view_model/auth/auth_viewModel.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -29,6 +31,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final authprovider = Provider.of<AuthViewmodel>(context);
     return Scaffold(
       appBar: AppBar(title: Text("Signup", style: TextStyle(fontSize: 22))),
       body: Form(
@@ -61,11 +64,12 @@ class _SignupScreenState extends State<SignupScreen> {
                   if (value == null || value.isEmpty) {
                     GeneralUtils.flushbarmessage(context, "Enter your email");
                   }
-                  if (value!.contains('@')) {
+                  if (!value!.contains('@')) {
                     GeneralUtils.flushbarmessage(
                       context,
                       "Enter your complete gmail",
                     );
+                    return null;
                   }
                 },
               ),
@@ -95,11 +99,31 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       ),
                     ),
+                    validator: (val) {
+                      if (val == null || val.isEmpty) {
+                        GeneralUtils.flushbarmessage(
+                          context,
+                          "Enter your password",
+                        );
+                        return null;
+                      }
+                    },
                   );
                 },
               ),
               SizedBox(height: 40),
-              RoundButton(title: "Sign Up", onPress: () {}),
+              RoundButton(
+                title: "Sign Up",
+                onPress: () {
+                  if (formkey.currentState!.validate()) {
+                    authprovider.signup(
+                      emailcontroller.text.toString(),
+                      passwordcontroller.text.toString(),
+                      context,
+                    );
+                  }
+                },
+              ),
               SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
